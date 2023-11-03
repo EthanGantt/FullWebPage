@@ -255,6 +255,7 @@ footer {
 
         #newsletter button {
             width: 260px;
+            margin-top: 10px;
         }
     }
 }
