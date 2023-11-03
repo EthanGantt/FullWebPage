@@ -28,7 +28,8 @@ ul {
     color: white;
 }
 
-.light, .dark {
+.light,
+.dark {
     padding: 15px;
     margin: 10px 0;
 }
@@ -77,7 +78,8 @@ header a {
     font-size: 18px;
 }
 
-    #highlight, #current a {
+#highlight,
+#current a {
     color: #eb4442;
     font-weight: 700;
 }
@@ -91,7 +93,7 @@ a:not(#current a):hover {
 /* Showcase */
 #showcase {
     background-image: url(laptop.png);
-    height: 400px;
+    min-height: 400px;
     background-size: cover;
     background-position: center;
     text-align: center;
@@ -134,7 +136,8 @@ a:not(#current a):hover {
 
 /* Boxes */
 #boxes {
-    height: 400px;
+    /* Fit content allows for the space to change to fit the content inside the element */
+    height: fit-content;
 }
 
 #boxes .container {
@@ -179,40 +182,69 @@ i {
     column-gap: 50px;
 }
 
-    /* Services */
-    #services .container {
-        display: grid;
+/* Services */
+#services .container {
+    display: grid;
     grid-template-columns: 2fr 1fr;
     column-gap: 50px;
+}
+
+#services ul {
+    /* Removes left padding as well as bullet points */
+    padding: 0;
+}
+
+#services li {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 5px;
+    background-color: #e6e6e6;
+}
+
+#services .sidebar {
+    margin-top: 10px;
+}
+
+#services input,
+#textarea {
+    width: 90%;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+/* Footer */
+footer {
+    background-color: #2d2b3e;
+    color: #e6e6e6;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header .container,
+    .newsletter,
+    #boxes .container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
     }
 
-    #services ul {
-        /* Removes left padding as well as bullet points */
+    header ul {
         padding: 0;
     }
 
-    #services li {
-        border: 1px solid #ccc;
-        padding: 20px;
-        margin-bottom: 5px;
-        background-color: #e6e6e6;
+    .box {
+        width: 80%;
     }
 
-    #services .sidebar {
-        margin-top: 10px;
+    #about .container,
+    #services .container {
+        grid-template-columns: 1fr;
     }
-
-    #services input, #textarea {
-        width: 90%;
-        margin-bottom: 10px;
-        padding: 5px;
-    }
-
-    /* Footer */
-    footer {
-        background-color: #2d2b3e;
-        color: #e6e6e6;
-        padding: 20px;
-        text-align: center;
-        margin-top: 20px;
-    }
+}
