@@ -131,7 +131,10 @@
             <aside class="sidebar">
                 <div class="dark">
                     <h3>Request A Quote</h3>
-                    <form class="quote">
+
+                    <!-- FormSubmit allows for an email address to be added to the form tag so that when the form is submitted the content/data in the form will be sent to the email added on the end of the "formsubmit.co" URL -->
+                    <!-- Syntax Example:  -->
+                    <form class="quote" action="https://formsubmit.co/ethan.gantt@stu.barren.kyschools.us" method="POST">
                         <div>
                             <label for="name">Name</label>
                             <br>
@@ -140,14 +143,12 @@
                         <label for="email">Email</label>
                         <br>
                         <input type="text" placeholder="Email">
-                </div>
-                <label for="name">Message</label>
+                    <label for="name">Message</label>
                 <br>
-                <input type="text" placeholder="Message">
-        </div>
-        <!-- <div class="container">
+                    <input type="text" placeholder="Message">
+                        <div class="container">
                         <button class="btn-1">Send</button>
-                    </div> -->
+                    </div>
         </form>
         </div>
         </aside>
